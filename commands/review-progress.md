@@ -12,7 +12,7 @@ Produce a concise progress review across recent entries, goals, and logs.
 
 2. **Gather inputs**:
    - Read the most recent 10 entries from the variant's entry folder.
-   - Read all files in `goals/` (or `search-criteria/` for house-search, `recommendations/` for preparedness, `goal-tracking/` for therapy-tracking).
+   - Read all files in `goals/` (or `search-criteria/` for house-search, `recommendations/` for preparedness).
    - Read the last few `logs/` entries if present.
 
 3. **Analyse**:

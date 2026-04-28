@@ -1,6 +1,8 @@
 # personal-planning-plugin
 
-Claude Code plugin for personal life planning — ships `log-entry`, `review-progress`, and `set-goal` primitives plus a provisioning skill that scaffolds a workspace for any of eight variants.
+Claude Code plugin for personal life planning — ships `log-entry`, `review-progress`, and `set-goal` primitives plus a provisioning skill that scaffolds a workspace for any of seven variants.
+
+> **Note:** Therapy tracking has been broken out into its own dedicated plugin: [Therapy-Tracking-Plugin](https://github.com/danielrosehill/Therapy-Tracking-Plugin).
 
 Part of the [danielrosehill Claude Code marketplace](https://github.com/danielrosehill/Claude-Code-Plugins).
 
@@ -31,7 +33,6 @@ Scaffolds a new workspace (CLAUDE.md + variant-appropriate folder tree), persona
 | `family-planning` | Parenting, family meetings, milestones |
 | `house-search` | House / apartment search funnel |
 | `preparedness` | Household preparedness |
-| `therapy-tracking` | Pre/post-session notes; voice-memo structuring |
 | `personal-dev` | Skills, habits, learning goals |
 | `inbox-hygiene` | Deceptive-email analysis + filter building |
 

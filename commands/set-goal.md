@@ -14,7 +14,6 @@ Create a new goal or update an existing one.
    - Default: `goals/`
    - `house-search`: `search-criteria/`
    - `preparedness`: `recommendations/`
-   - `therapy-tracking`: `goal-tracking/`
    - `inbox-hygiene`: `rules/` (filter goals)
 
 3. **Collect**: From `$ARGUMENTS` or by asking, gather:

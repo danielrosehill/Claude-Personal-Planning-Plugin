@@ -1,6 +1,6 @@
 ---
 name: new-workspace
-description: Provision a new personal-planning workspace on disk. Use when the user wants to start a new personal-planning workspace — diary, health tracking, family planning, house search, preparedness, therapy tracking, personal-dev, or inbox hygiene. Accepts a workspace name and variant. Scaffolds the workspace, personalises CLAUDE.md from the user's global memory, and (by default) creates a GitHub repo.
+description: Provision a new personal-planning workspace on disk. Use when the user wants to start a new personal-planning workspace — diary, health tracking, family planning, house search, preparedness, personal-dev, or inbox hygiene. Accepts a workspace name and variant. Scaffolds the workspace, personalises CLAUDE.md from the user's global memory, and (by default) creates a GitHub repo. (For therapy tracking, use the dedicated `therapy-tracking` plugin.)
 disable-model-invocation: true
 allowed-tools: Bash(mkdir *), Bash(cp *), Bash(cat *), Bash(git init *), Bash(git add *), Bash(git commit *), Bash(gh repo create *), Bash(gh auth status), Bash(git push *), Read
 ---
@@ -15,7 +15,7 @@ Creates a new workspace for a personal-planning use case. This plugin's commands
 
 - **First positional**: workspace name (kebab-case, used as directory and GitHub repo name). Required.
 - **Second positional** (optional): target parent path. Defaults to `~/repos/github/my-repos`.
-- **`--variant=<diary|health-wellness|family-planning|house-search|preparedness|therapy-tracking|personal-dev|inbox-hygiene>`** (optional): which scaffold to copy. Default: `diary`.
+- **`--variant=<diary|health-wellness|family-planning|house-search|preparedness|personal-dev|inbox-hygiene>`** (optional): which scaffold to copy. Default: `diary`. (For `therapy-tracking`, use the dedicated `therapy-tracking` plugin instead.)
 - **`--local-only`** (optional): skip GitHub repo creation and push. Default: create a public GitHub repo and push.
 - **`--private`** (optional): create the GitHub repo as private. Default: public.
 
@@ -25,7 +25,6 @@ Creates a new workspace for a personal-planning use case. This plugin's commands
 /personal-planning:new-workspace my-diary
 /personal-planning:new-workspace health-log --variant=health-wellness --private
 /personal-planning:new-workspace flat-search --variant=house-search
-/personal-planning:new-workspace therapy-notes --variant=therapy-tracking --private
 /personal-planning:new-workspace go-bag --variant=preparedness
 /personal-planning:new-workspace inbox-rules --variant=inbox-hygiene
 ```
@@ -70,7 +69,6 @@ Ask the user only for facts this plugin can't infer — variant-dependent:
 - **family-planning**: who this covers (self, partner, children count).
 - **house-search**: target city/area and budget range.
 - **preparedness**: region and household size.
-- **therapy-tracking**: therapy modality (CBT, EMDR, etc.) and session cadence.
 - **personal-dev**: top-level goals or skill areas.
 - **inbox-hygiene**: email account being triaged.
 
@@ -91,7 +89,7 @@ Unless `--local-only` is set:
 gh repo create <workspace-name> --<public|private> --source=. --push
 ```
 
-Use `--public` by default, `--private` if flag was passed. For therapy-tracking, health-wellness, and inbox-hygiene variants, remind the user that private is usually more appropriate if they chose public.
+Use `--public` by default, `--private` if flag was passed. For health-wellness and inbox-hygiene variants, remind the user that private is usually more appropriate if they chose public.
 
 ### 8. Print next steps
 

@@ -1,5 +1,5 @@
 ---
-description: Record a dated entry in the current personal-planning workspace. Works across all variants (diary, health, family, house-search, preparedness, therapy, personal-dev, inbox-hygiene).
+description: Record a dated entry in the current personal-planning workspace. Works across all variants (diary, health, family, house-search, preparedness, personal-dev, inbox-hygiene).
 ---
 
 # /personal-planning:log-entry
@@ -8,13 +8,12 @@ Append a new dated entry into the active workspace.
 
 ## Procedure
 
-1. **Detect variant**: Read the workspace `CLAUDE.md` to determine the variant (diary / health-wellness / family-planning / house-search / preparedness / therapy-tracking / personal-dev / inbox-hygiene). Use that to pick the target folder:
+1. **Detect variant**: Read the workspace `CLAUDE.md` to determine the variant (diary / health-wellness / family-planning / house-search / preparedness / personal-dev / inbox-hygiene). Use that to pick the target folder:
    - `diary` → `entries/`
    - `health-wellness` → `log/`
    - `family-planning` → `family-meetings/` or `milestones/` (ask if ambiguous)
    - `house-search` → `viewings/` or `listings/` (ask)
    - `preparedness` → `input/`
-   - `therapy-tracking` → `therapy-sessions/`
    - `personal-dev` → `progress/`
    - `inbox-hygiene` → `inputs/` (email artefacts)
 
